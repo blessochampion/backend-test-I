@@ -18,7 +18,7 @@ public class App {
     private static final String KEY_COLUMN_FOLLOWERS_COUNT = "column_followers_count";
     private static final String KEY_QUEUE_COUNT= "queue_count";
     private static final int TWITTER_FOLLOWER_LOWER_bOUND = 1000;
-    private static final int TWITTER_FOLLOWER_UPPER_bOUND = 5000;
+    private static final int TWITTER_FOLLOWER_UPPER_bOUND = 50000;
 
     public static void main(String[] args) {
         if (args.length < 1) {

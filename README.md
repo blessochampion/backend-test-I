@@ -77,16 +77,16 @@ Two tools were used in the implementation
  A *property file* that contains the credentials for both Twitter and Google Sheet is required to start the app.
  The property file should should contains the following:
  
- ```
- consumer_key=
-consumer_secret=
-access_token=
-access_token_secret=
-sheet_id=
-column_name=
-column_followers_count=
-queue_count=
-```
+   ```
+  consumer_key=
+  consumer_secret=
+  access_token=
+  access_token_secret=
+  sheet_id=
+  column_name=
+  column_followers_count=
+  queue_count=
+  ```
 
 The `consumer_key`, `consumer_secret`, `access_token`, `access_token_secret`  are the ones gotten from twitter.
 `sheet_id` is the id of the google sheet document. For example https://docs.google.com/spreadsheets/d/1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs74OgvE2upms/edit#gid=0
@@ -95,4 +95,10 @@ the `sheet_id` = 1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs74OgvE2upms
 `column_followers_count` is the header name for the google sheet column that will contain the twitter follower count.
 *Note:* that writing to Google Sheet requires api request, if you will like the Bot to write to the sheet after say 5 user data is available, `queue_count=5`. `queue_count` can take values between 1 and 10 inclusive.
 
-To run the app `java App propertyFile`, where `propertyFile` is the file that contains the keyValue pair of your credentials.
+To run the app:
+
+    java App propertyFile
+
+
+Where `propertyFile` is the file that contains the keyValue pair of your credentials.
+

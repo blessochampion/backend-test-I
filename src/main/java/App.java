@@ -20,7 +20,7 @@ public class App {
 
     public static void main(String[] args) {
         if (args.length < 1) {
-            System.err.println("Usage : java ConfigFile");
+            System.err.println("Usage : java App ConfigFile");
             return;
         }
         String fileName = args[0];

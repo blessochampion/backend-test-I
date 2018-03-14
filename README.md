@@ -43,3 +43,56 @@ We look forward to seeing what you can do. Remember, although it is a test, ther
 
 ## Demo
 ![screen shot](https://user-images.githubusercontent.com/8668661/33088863-330b4250-ceef-11e7-9e9c-b4fd9ca299d8.gif)
+
+
+
+
+
+
+
+
+## My Approach
+Two tools were used in the implementation
+1. [Twitter4j](http://twitter4j.org/en/)
+
+  This is an unofficial library for twitter api. It was used for connecting to the twitter streaming api.
+  To use the twitter api, you need to create a twitter app [@apps.twitter.com](https://apps.twitter.com). You will need the following     credentials for successfull connection.
+  ```
+  Consumer Key (API Key)
+  Consumer Secret (API Secret)
+  ```
+  Generate access token, to get:
+  ```
+  Access Token
+  Access Token Secret
+  ```
+ 
+ 2. [GoogleSheets Api](https://developers.google.com/sheets/api/)
+ 
+ Google sheets api allows you to read/write to your google sheets documents. Check https://developers.google.com/sheets/api/quickstart/java on how to setup a project.
+ Don't forget to add `client_secret.json` to your working directory.... so you have `src/main/resources/client_secret.json`
+ 
+## Running the Project
+
+ A *property file* that contains the credentials for both Twitter and Google Sheet is required to start the app.
+ The property file should should contains the following:
+ 
+ ```
+ consumer_key=
+consumer_secret=
+access_token=
+access_token_secret=
+sheet_id=
+column_name=
+column_followers_count=
+queue_count=
+```
+
+The `consumer_key`, `consumer_secret`, `access_token`, `access_token_secret`  are the ones gotten from twitter.
+`sheet_id` is the id of the google sheet document. For example https://docs.google.com/spreadsheets/d/1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs74OgvE2upms/edit#gid=0
+the `sheet_id` = 1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs74OgvE2upms
+`column_name` is the column header name for the google sheet column that will contain the twiter username.
+`column_followers_count` is the header name for the google sheet column that will contain the twitter follower count.
+*Note:* that writing to Google Sheet requires api request, if you will like the Bot to write to the sheet after say 5 user data is available, `queue_count=5`. `queue_count` can take values between 1 and 10 inclusive.
+
+To run the app `java App propertyFile`, where `propertyFile` is the file that contains the keyValue pair of your credentials.

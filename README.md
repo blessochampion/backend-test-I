@@ -102,3 +102,6 @@ To run the app:
 
 Where `propertyFile` is the file that contains the keyValue pair of your credentials.
 
+## Demo
+You can checkout the video Demo [HERE](https://www.dropbox.com/s/8ksb5kayr8r8f7r/twitterbot.mp4?dl=0)
+
